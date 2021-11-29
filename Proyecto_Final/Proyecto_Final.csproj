@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F95155E0-4EEE-48BF-9565-95E1B19F4872}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Proyecto_Final</RootNamespace>
+    <AssemblyName>Proyecto_Final</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MigraDoc.Rendering-WPF">
+      <HintPath>..\PDFSharp-MigraDocFoundation-1_31\MigraDoc\samples\Samples C#\Based on WPF\Images\bin\Debug\MigraDoc.Rendering-WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="MigraDoc.RtfRendering-WPF">
+      <HintPath>..\PDFSharp-MigraDocFoundation-1_31\MigraDoc\samples\Samples C#\Based on WPF\Images\bin\Debug\MigraDoc.RtfRendering-WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="PdfSharp-WPF">
+      <HintPath>..\PDFSharp-MigraDocFoundation-1_31\MigraDoc\samples\Samples C#\Based on WPF\Images\bin\Debug\PdfSharp-WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting-WPF">
+      <HintPath>..\PDFSharp-MigraDocFoundation-1_31\MigraDoc\samples\Samples C#\Based on WPF\Images\bin\Debug\PdfSharp.Charting-WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseDeDatos.cs" />
+    <Compile Include="chart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chart.Designer.cs">
+      <DependentUpon>chart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cita.designer.cs">
+      <DependentUpon>cita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clsVenta.cs" />
+    <Compile Include="area.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="area.designer.cs">
+      <DependentUpon>area.cs</DependentUpon>
+    </Compile>
+    <Compile Include="consulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consulta.designer.cs">
+      <DependentUpon>consulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Elegir_doctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elegir_doctor.designer.cs">
+      <DependentUpon>Elegir_doctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Elegir_consultorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elegir_consultorio.designer.cs">
+      <DependentUpon>Elegir_consultorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Elegir_Consulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elegir_Consulta.designer.cs">
+      <DependentUpon>Elegir_Consulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Elegir_Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elegir_Producto.designer.cs">
+      <DependentUpon>Elegir_Producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Farmacia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Farmacia.designer.cs">
+      <DependentUpon>Farmacia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forma_pago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forma_pago.designer.cs">
+      <DependentUpon>forma_pago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="historial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="historial.designer.cs">
+      <DependentUpon>historial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mobiliario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mobiliario.designer.cs">
+      <DependentUpon>Mobiliario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pacientes.designer.cs">
+      <DependentUpon>Pacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleados.designer.cs">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Proveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proveedor.designer.cs">
+      <DependentUpon>Proveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tipo de sesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tipo de sesion.Designer.cs">
+      <DependentUpon>Tipo de sesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios.designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Elegir Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elegir Cliente.designer.cs">
+      <DependentUpon>Elegir Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenuPrincipal.designer.cs">
+      <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOlvContra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOlvContra.Designer.cs">
+      <DependentUpon>FrmOlvContra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegistroVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistroVentas.designer.cs">
+      <DependentUpon>FrmRegistroVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HistorialVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistorialVentas.designer.cs">
+      <DependentUpon>HistorialVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inventario.designer.cs">
+      <DependentUpon>inventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Restaurar contraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Restaurar contraseña.Designer.cs">
+      <DependentUpon>Restaurar contraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctores.Designer.cs">
+      <DependentUpon>Doctores.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="area.resx">
+      <DependentUpon>area.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chart.resx">
+      <DependentUpon>chart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cita.resx">
+      <DependentUpon>cita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consulta.resx">
+      <DependentUpon>consulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elegir_doctor.resx">
+      <DependentUpon>Elegir_doctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elegir_consultorio.resx">
+      <DependentUpon>Elegir_consultorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elegir_Consulta.resx">
+      <DependentUpon>Elegir_Consulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elegir_Producto.resx">
+      <DependentUpon>Elegir_Producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Farmacia.resx">
+      <DependentUpon>Farmacia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forma_pago.resx">
+      <DependentUpon>forma_pago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="historial.resx">
+      <DependentUpon>historial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mobiliario.resx">
+      <DependentUpon>Mobiliario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pacientes.resx">
+      <DependentUpon>Pacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleados.resx">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proveedor.resx">
+      <DependentUpon>Proveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tipo de sesion.resx">
+      <DependentUpon>Tipo de sesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elegir Cliente.resx">
+      <DependentUpon>Elegir Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenuPrincipal.resx">
+      <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOlvContra.resx">
+      <DependentUpon>FrmOlvContra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistroVentas.resx">
+      <DependentUpon>FrmRegistroVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistorialVentas.resx">
+      <DependentUpon>HistorialVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventario.resx">
+      <DependentUpon>inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Restaurar contraseña.resx">
+      <DependentUpon>Restaurar contraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctores.resx">
+      <DependentUpon>Doctores.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
